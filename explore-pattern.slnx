@@ -1,0 +1,15 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/explore-pattern.Api/explore-pattern.Api.csproj" Id="c682c5fb-6b7a-4bed-8dca-ca03e5748c93" />
+  </Folder>
+  <Folder Name="/src/Core/">
+    <Project Path="explore-pattern.Application/explore-pattern.Application.csproj" Id="d149925a-266f-494b-b342-99a788d02951" />
+    <Project Path="src/Core/explore-pattern.Abstractions/explore-pattern.Abstractions.csproj" Id="e9fe623a-bd9e-4910-9a06-b11ac0260e8b" />
+    <Project Path="src/Core/explore-pattern.Domain/explore-pattern.Domain.csproj" Id="0ae29735-7af6-4f79-9212-5660e61ed751" />
+  </Folder>
+  <Folder Name="/src/Infrastructure/">
+    <Project Path="src/Infrastructure/explore-pattern.Persistence/explore-pattern.Persistence.csproj" Id="fdfa6581-f753-470a-9be9-8befed976f1d" />
+    <Project Path="src/Infrastructure/explore-pattern.Presentation/explore-pattern.Presentation.csproj" Id="7597eeb4-1d7a-402f-9cc2-81698117e884" />
+  </Folder>
+  <Folder Name="/tests/" />
+</Solution>
