@@ -2,6 +2,7 @@
 source code for explore dotnet repository pattern
 
 ## 📐 Architecture Overview
+``
 src
 ├── Core
 │ ├── Abstractions
@@ -14,7 +15,7 @@ src
 │
 ├── Api
 └── tests
-
+``
 
 > **Dependency Rule:**  
 > Outer layers depend on inner layers — never the opposite.
