@@ -1,0 +1,18 @@
+{
+  "store": {
+    "id": "1f8d9f6e-9a3c-4a9c-bc25-9a3d2e8c1123",
+    "name": "Main Store",
+    "items": [
+      {
+        "id": "e6d5b1c2-6f3e-4f4e-b7b6-2f93c63f6b11",
+        "name": "Sample Item",
+        "price": 10000
+      },
+      {
+        "id": "a4c2d6e7-91bb-4fa0-8e2f-4b7d9c11a333",
+        "name": "Another Item",
+        "price": 25000
+      }
+    ]
+  }
+}

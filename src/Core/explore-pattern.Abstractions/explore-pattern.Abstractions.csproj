@@ -8,10 +8,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Commands\" />
-    <Folder Include="Services\" />
-    <Folder Include="Queries\" />
-    <Folder Include="Repositories\" />
+    <ProjectReference Include="..\explore-pattern.Domain\explore-pattern.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Applications\" />
   </ItemGroup>
 
 </Project>

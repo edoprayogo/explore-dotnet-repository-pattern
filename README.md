@@ -5,17 +5,24 @@ source code for explore dotnet repository pattern
 ```
 src
 ├── Core
-│ ├── Abstractions
 │ ├── Application
 │ └── Domain
 │
 ├── Infrastructure
 │ ├── Persistence
-│ └── Presentation
 │
 ├── Api
 └── tests
 ```
+
+- **Core**
+  - `Application` – business logic
+  - `Domain` – domain models, interfaces & contracts
+- **Infrastructure**
+  - `Persistence` – database & external services
+- **Api** – application entry point
+- **tests** – unit & integration tests
+
 
 > **Dependency Rule:**  
 > Outer layers depend on inner layers — never the opposite.
