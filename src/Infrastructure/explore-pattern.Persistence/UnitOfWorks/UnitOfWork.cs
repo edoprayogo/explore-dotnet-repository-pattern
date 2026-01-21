@@ -1,6 +1,8 @@
 ﻿using explore_pattern.Domain.Entities;
 using explore_pattern.Domain.Interfaces.Persistences;
+using explore_pattern.Domain.Interfaces.Persistences.Repositories;
 using explore_pattern.Persistence.Databases;
+using explore_pattern.Persistence.Repositories;
 
 namespace explore_pattern.Persistence.UnitOfWorks
 {
@@ -13,6 +15,8 @@ namespace explore_pattern.Persistence.UnitOfWorks
         public IGenericRepository<Product> Products { get; }
         public IGenericRepository<Order> Orders { get; }
 
+        public IProductRepository ProductQueries { get; }
+
         public UnitOfWork(DemoStoreDbContext context)
         {
             _context = context;
@@ -21,6 +25,7 @@ namespace explore_pattern.Persistence.UnitOfWorks
             Categories = new GenericRepository<Category>(context);
             Products = new GenericRepository<Product>(context);
             Orders = new GenericRepository<Order>(context);
+            ProductQueries = new ProductRepository(context);
         }
 
         public async Task<int> SaveChangesAsync()

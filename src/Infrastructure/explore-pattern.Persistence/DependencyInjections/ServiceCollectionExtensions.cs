@@ -7,20 +7,33 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace explore_pattern.Persistence.DependencyInjections
 {
+    /// <summary>
+    /// Provides extension methods for registering infrastructure-related services
+    /// into the dependency injection container.
+    /// </summary>
     public static class ServiceCollectionExtensions
     {
+        /// <summary>
+        /// Registers all infrastructure and application dependencies.
+        /// This method should be called from Program.cs.
+        /// </summary>
+        /// <param name="services">The service collection.</param>
+        /// <param name="configuration">Application configuration.</param>
+        /// <returns>The updated service collection.</returns
         public static IServiceCollection AddInfrastructure(
             this IServiceCollection services,
             IConfiguration configuration)
         {
-            services.AddScoped<IUnitOfWork, UnitOfWork>();
+    
 
-            return services;
-        }
+            // Register database-related dependencies
+            services.AddDatabaseContext(configuration);
 
-        public static IServiceCollection AddApplication(this IServiceCollection services)
-        {
-            services.AddScoped<ProductService>();
+
+            // Register application layer (service, repository, etc.) dependencies
+            services.AddApplication();
+
+
             return services;
         }
 

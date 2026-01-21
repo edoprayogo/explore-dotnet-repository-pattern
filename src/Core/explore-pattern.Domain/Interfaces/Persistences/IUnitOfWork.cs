@@ -1,4 +1,5 @@
 ﻿using explore_pattern.Domain.Entities;
+using explore_pattern.Domain.Interfaces.Persistences.Repositories;
 
 namespace explore_pattern.Domain.Interfaces.Persistences
 {
@@ -8,6 +9,8 @@ namespace explore_pattern.Domain.Interfaces.Persistences
         IGenericRepository<Category> Categories { get; }
         IGenericRepository<Product> Products { get; }
         IGenericRepository<Order> Orders { get; }
+
+        IProductRepository ProductQueries { get; }
 
         Task<int> SaveChangesAsync();
     }

@@ -1,27 +1,46 @@
-﻿using explore_pattern.Domain.Entities;
+﻿using explore_pattern.Domain.Commons;
+using explore_pattern.Domain.Constants;
+using explore_pattern.Domain.Dtos.Models;
+using explore_pattern.Domain.Entities;
+using explore_pattern.Domain.Helpers;
 using explore_pattern.Domain.Interfaces.Persistences;
 
 namespace explore_pattern.Application.Services
 {
     public class ProductService
     {
+        #region prop and ctor
         private readonly IUnitOfWork _uow;
-
+        private const string _entityName = "Products";
         public ProductService(IUnitOfWork uow)
         {
             _uow = uow;
         }
+        #endregion
 
         // READ ALL
-        public async Task<IEnumerable<Product>> GetAllAsync()
-            => await _uow.Products.GetAllAsync();
+        public async Task<IEnumerable<Product>> GetAll()
+        {
+            var products = await _uow.Products.GetAllAsync();
+            return products is null
+                ? Enumerable.Empty<Product>()
+                : products;
+        }
 
         // READ BY ID
-        public async Task<Product?> GetByIdAsync(Guid id)
-            => await _uow.Products.GetByIdAsync(id);
+        public async Task<Result<Product>> GetById(Guid id)
+        {
+            var product = await _uow.Products.GetByIdAsync(id);
+
+            return product is null
+                ? Result<Product>.Failure(MessageFormatter.Format(Message.NotFoundData, _entityName))
+                : Result<Product>.Success(product);
+        }
+
+
 
         // CREATE
-        public async Task<Guid> CreateAsync(Guid categoryId, string name, decimal price)
+        public async Task<Guid> Create(Guid categoryId, string name, decimal price)
         {
             var product = new Product
             {
@@ -38,7 +57,7 @@ namespace explore_pattern.Application.Services
         }
 
         // UPDATE
-        public async Task<bool> UpdateAsync(Guid id, string name, decimal price)
+        public async Task<bool> Update(Guid id, string name, decimal price)
         {
             var product = await _uow.Products.GetByIdAsync(id);
             if (product is null)
@@ -54,7 +73,7 @@ namespace explore_pattern.Application.Services
         }
 
         // DELETE
-        public async Task<bool> DeleteAsync(Guid id)
+        public async Task<bool> Delete(Guid id)
         {
             var product = await _uow.Products.GetByIdAsync(id);
             if (product is null)
@@ -64,6 +83,15 @@ namespace explore_pattern.Application.Services
             await _uow.SaveChangesAsync();
 
             return true;
+        }
+
+        // GET PRODUCT DESC LIST
+        public async Task<IEnumerable<ProductDescListDto>> GetProductDescList()
+        {
+            var products = await _uow.ProductQueries.GetProductDescList();
+            return products is null
+                ? Enumerable.Empty<ProductDescListDto>()
+                : products;
         }
     }
 }

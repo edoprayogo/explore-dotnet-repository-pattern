@@ -8,9 +8,7 @@ builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
-builder.Services.AddDatabaseContext(builder.Configuration);
 builder.Services.AddInfrastructure(builder.Configuration);
-builder.Services.AddApplication();
 
 
 var app = builder.Build();

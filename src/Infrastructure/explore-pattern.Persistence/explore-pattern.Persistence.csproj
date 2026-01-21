@@ -24,8 +24,4 @@
     <ProjectReference Include="..\..\Core\explore-pattern.Domain\explore-pattern.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Repositories\" />
-  </ItemGroup>
-
 </Project>
