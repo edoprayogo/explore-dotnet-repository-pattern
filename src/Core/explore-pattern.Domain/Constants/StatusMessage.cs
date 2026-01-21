@@ -1,6 +1,6 @@
 ﻿namespace explore_pattern.Domain.Constants
 {
-    public static class Message
+    public static class StatusMessage
     {
         public const string SuccessString = "Success";
         public const string FailedString = "Operation failed";

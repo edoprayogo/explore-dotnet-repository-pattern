@@ -10,7 +10,7 @@ namespace explore_pattern.Domain.Commons
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         public T? Data { get; set; }
 
-        public static ApiResponse<T> Success(T data, string message = Constants.Message.SuccessString)
+        public static ApiResponse<T> Success(T data, string message = Constants.StatusMessage.SuccessString)
         {
             return new ApiResponse<T>
             {

@@ -33,7 +33,7 @@ namespace explore_pattern.Application.Services
             var product = await _uow.Products.GetByIdAsync(id);
 
             return product is null
-                ? Result<Product>.Failure(MessageFormatter.Format(Message.NotFoundData, _entityName))
+                ? Result<Product>.Failure(MessageFormatter.Format(StatusMessage.NotFoundData, _entityName))
                 : Result<Product>.Success(product);
         }
 
