@@ -33,11 +33,6 @@ src
 
 ### 🔵 Core
 
-**Core.Abstractions**  
-Contracts and interfaces only:
-- Repository interfaces
-- Service abstractions
-- Unit of Work contracts
 
 **Core.Application**  
 Application & business logic:
@@ -50,6 +45,9 @@ Pure domain models:
 - Entities
 - Value Objects
 - Enums  
+- Repository interfaces
+- Service abstractions
+- Unit of Work contracts
 ⚠️ No framework, no infrastructure, no technical logic.
 
 ---
@@ -62,11 +60,6 @@ Technical implementations:
 - Repository implementations
 - External services & integrations
 
-**Infrastructure.Presentation**  
-API presentation layer:
-- Controllers
-- Request/Response models
-- HTTP-related concerns only
 
 ---
 
@@ -74,9 +67,13 @@ API presentation layer:
 
 **Api**  
 Main application entry point:
+- Controllers
+- Request/Response models
+- HTTP-related concerns only
 - Dependency Injection
 - Configuration
 - Middleware & hosting pipeline
+
 
 ---
 
