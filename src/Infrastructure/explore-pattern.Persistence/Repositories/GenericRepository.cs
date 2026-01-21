@@ -1,8 +1,8 @@
-﻿using explore_pattern.Domain.Interfaces.Persistences;
+﻿using explore_pattern.Domain.Interfaces.Persistences.Repositories;
 using explore_pattern.Persistence.Databases;
 using Microsoft.EntityFrameworkCore;
 
-namespace explore_pattern.Persistence.UnitOfWorks
+namespace explore_pattern.Persistence.Repositories
 {
     public class GenericRepository<T> : IGenericRepository<T> where T : class
     {

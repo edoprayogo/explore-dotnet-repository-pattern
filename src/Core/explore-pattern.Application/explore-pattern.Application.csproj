@@ -11,4 +11,9 @@
     <ProjectReference Include="..\explore-pattern.Domain\explore-pattern.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Commands\Stores\DeleteStore\" />
+    <Folder Include="Commands\Stores\UpdateStore\" />
+  </ItemGroup>
+
 </Project>

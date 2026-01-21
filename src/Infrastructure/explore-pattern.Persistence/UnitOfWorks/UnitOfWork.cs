@@ -17,6 +17,9 @@ namespace explore_pattern.Persistence.UnitOfWorks
 
         public IProductRepository ProductQueries { get; }
 
+        public IStoreReadRepository StoreRead { get; }
+        public IStoreWriteRepository StoreWrite { get; }
+
         public UnitOfWork(DemoStoreDbContext context)
         {
             _context = context;
@@ -26,6 +29,8 @@ namespace explore_pattern.Persistence.UnitOfWorks
             Products = new GenericRepository<Product>(context);
             Orders = new GenericRepository<Order>(context);
             ProductQueries = new ProductRepository(context);
+            StoreRead = new StoreReadRepository(context);
+            StoreWrite = new StoreWriteRepository(context);
         }
 
         public async Task<int> SaveChangesAsync()

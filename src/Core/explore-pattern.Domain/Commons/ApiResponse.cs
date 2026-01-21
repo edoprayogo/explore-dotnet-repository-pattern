@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using explore_pattern.Domain.Constants;
+using Microsoft.AspNetCore.Http;
 using System.Text.Json.Serialization;
 
 namespace explore_pattern.Domain.Commons
@@ -10,7 +11,7 @@ namespace explore_pattern.Domain.Commons
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         public T? Data { get; set; }
 
-        public static ApiResponse<T> Success(T data, string message = Constants.Message.SuccessString)
+        public static ApiResponse<T> Success(T data, string message = Message.SuccessString)
         {
             return new ApiResponse<T>
             {
@@ -22,6 +23,12 @@ namespace explore_pattern.Domain.Commons
                 Data = data
             };
         }
+
+        public static ApiResponse<T> NotFound(string message = Message.NotFoundData)
+            => new()
+            {
+                Status = new ApiStatus { Code = StatusCodes.Status404NotFound, Message = message }
+            };
 
         public static ApiResponse<T> Fail(int code, string message)
         {

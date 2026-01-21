@@ -1,4 +1,4 @@
-﻿namespace explore_pattern.Domain.Interfaces.Persistences
+﻿namespace explore_pattern.Domain.Interfaces.Persistences.Repositories
 {
     public interface IGenericRepository<T> where T : class
     {
