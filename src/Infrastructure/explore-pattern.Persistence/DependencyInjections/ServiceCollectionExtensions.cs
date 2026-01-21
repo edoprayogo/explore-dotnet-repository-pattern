@@ -1,8 +1,4 @@
-﻿using explore_pattern.Application.Services;
-using explore_pattern.Domain.Interfaces.Persistences;
-using explore_pattern.Persistence.UnitOfWorks;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
+﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace explore_pattern.Persistence.DependencyInjections
