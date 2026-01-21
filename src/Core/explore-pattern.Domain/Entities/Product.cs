@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace explore_pattern.Domain.Entities
+﻿namespace explore_pattern.Domain.Entities
 {
     public class Product
     {
