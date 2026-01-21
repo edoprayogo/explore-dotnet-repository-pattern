@@ -27,8 +27,8 @@ namespace explore_pattern.Api.Controllers
             var result = await _service.GetAll();
 
             var message = result.Any()
-                ? Message.SuccessString
-                : Message.NotFoundData;
+                ? StatusMessage.SuccessString
+                : StatusMessage.NotFoundData;
 
             return Ok(ApiResponse<IEnumerable<Product>>.Success(result, message));
         }
@@ -76,8 +76,8 @@ namespace explore_pattern.Api.Controllers
         {
             var result = await _service.GetProductDescList();
             var message = result.Any()
-                ? Message.SuccessString
-                : Message.NotFoundData;
+                ? StatusMessage.SuccessString
+                : StatusMessage.NotFoundData;
             return Ok(ApiResponse<IEnumerable<object>>.Success(result, message));
         }
     }
