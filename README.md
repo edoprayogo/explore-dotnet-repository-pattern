@@ -1,7 +1,7 @@
 # 🧩 Explore Pattern — N‑Layer Architecture with EF Core (.NET)
 
-Source code untuk eksplorasi **N‑Layer Architecture**  
-(`Controller → Service → Repository → Unit of Work`) menggunakan **Entity Framework Core**
+Source code for explore **N‑Layer Architecture**  
+(`Controller → Service → Repository → Unit of Work`) use **Entity Framework Core**
 
 ---
 
@@ -75,7 +75,6 @@ Defines **commit & transaction boundary**.
 - Ensures atomicity across multiple repositories
 
 UnitOfWorks/
-
 ---
 
 ### 🧾 Interfaces
@@ -87,7 +86,6 @@ Holds **abstractions** to support loose coupling.
 
 
 Interfaces/
-
 ---
 
 ### 🗄️ Database Layer
@@ -99,7 +97,6 @@ EF Core persistence components.
 
 
 Databases/
-
 ---
 
 ### 🧪 Models
@@ -111,7 +108,6 @@ Application data structures.
 
 
 Models/
-
 ---
 
 ### ⚙️ Configurations
@@ -123,7 +119,6 @@ Application setup and dependency mappings.
 
 
 Configurations/
-
 ---
 
 ### 🧰 Utilities
@@ -136,7 +131,6 @@ Utilities/
 ├── Helpers
 │   └── MessageFormatter.cs
 ```
-
 ---
 
 ## 🔁 Dependency Flow Summary
