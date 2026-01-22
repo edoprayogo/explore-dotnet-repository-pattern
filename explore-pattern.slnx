@@ -5,5 +5,7 @@
   <Folder Name="/src/">
     <Project Path="src/explore-pattern.Api/explore-pattern.Api.csproj" Id="c682c5fb-6b7a-4bed-8dca-ca03e5748c93" />
   </Folder>
-  <Folder Name="/tests/" />
+  <Folder Name="/tests/">
+    <Project Path="tests/explore-pattern.Api-tests/explore-pattern.Api-tests.csproj" Id="4d77e70d-8ec8-48df-a6ec-deb3dff89556" />
+  </Folder>
 </Solution>
