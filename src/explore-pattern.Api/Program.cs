@@ -1,4 +1,4 @@
-using explore_pattern.Persistence.DependencyInjections;
+using explore_pattern.Api.Configurations.DependencyInjections;
 
 var builder = WebApplication.CreateBuilder(args);
 

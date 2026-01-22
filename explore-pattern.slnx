@@ -5,12 +5,5 @@
   <Folder Name="/src/">
     <Project Path="src/explore-pattern.Api/explore-pattern.Api.csproj" Id="c682c5fb-6b7a-4bed-8dca-ca03e5748c93" />
   </Folder>
-  <Folder Name="/src/Core/">
-    <Project Path="src/Core/explore-pattern.Application/explore-pattern.Application.csproj" Id="fda5929a-b502-44d0-a512-aa76d5bf7c49" />
-    <Project Path="src/Core/explore-pattern.Domain/explore-pattern.Domain.csproj" Id="0ae29735-7af6-4f79-9212-5660e61ed751" />
-  </Folder>
-  <Folder Name="/src/Infrastructure/">
-    <Project Path="src/Infrastructure/explore-pattern.Persistence/explore-pattern.Persistence.csproj" Id="fdfa6581-f753-470a-9be9-8befed976f1d" />
-  </Folder>
   <Folder Name="/tests/" />
 </Solution>
