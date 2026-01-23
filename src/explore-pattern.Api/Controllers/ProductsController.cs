@@ -40,9 +40,11 @@ namespace explore_pattern.Api.Controllers
             var result = await _service.GetById(id);
 
             if (!result.IsSuccess)
-                return NotFound(ApiResponse<string>.Fail(StatusCodes.Status404NotFound, result.Error!));
+                return NotFound(ApiResponse<string>.
+                    Fail(StatusCodes.Status404NotFound, result.Error!));
 
-            return Ok(ApiResponse<Product>.Success(result.Value!));
+            return Ok(ApiResponse<Product>
+                .Success(result.Value!));
         }
 
         [HttpPost]

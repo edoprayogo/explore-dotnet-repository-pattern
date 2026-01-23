@@ -1,4 +1,5 @@
 ﻿using explore_pattern.Domain.Dtos.Models;
+using explore_pattern.Domain.Entities;
 using explore_pattern.Domain.Interfaces.Persistences.Repositories;
 using explore_pattern.Persistence.Databases;
 using Microsoft.EntityFrameworkCore;

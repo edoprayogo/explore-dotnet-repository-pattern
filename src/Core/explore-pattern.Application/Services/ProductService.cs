@@ -30,7 +30,8 @@ namespace explore_pattern.Application.Services
         // READ BY ID
         public async Task<Result<Product>> GetById(Guid id)
         {
-            var product = await _uow.Products.GetByIdAsync(id);
+            var product = await _uow.Products
+                .GetByIdAsync(id);
 
             return product is null
                 ? Result<Product>.Failure(MessageFormatter.Format(StatusMessage.NotFoundData, _entityName))
@@ -93,5 +94,6 @@ namespace explore_pattern.Application.Services
                 ? Enumerable.Empty<ProductDescListDto>()
                 : products;
         }
+
     }
 }
