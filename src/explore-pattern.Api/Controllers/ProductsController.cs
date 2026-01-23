@@ -1,8 +1,8 @@
-﻿using explore_pattern.Application.Services;
-using explore_pattern.Domain.Commons;
-using explore_pattern.Domain.Constants;
-using explore_pattern.Domain.Dtos.Requests;
-using explore_pattern.Domain.Entities;
+﻿using explore_pattern.Api.Models.BaseModels;
+using explore_pattern.Api.Models.Dtos.Requests;
+using explore_pattern.Api.Models.Entities;
+using explore_pattern.Api.Services;
+using explore_pattern.Api.Utilities.Constants;
 using Microsoft.AspNetCore.Mvc;
 
 namespace explore_pattern.Api.Controllers
