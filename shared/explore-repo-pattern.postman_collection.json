@@ -1,0 +1,266 @@
+{
+  "info": {
+    "_postman_id": "e33880da-e1d8-4464-8834-956cb79e14a9",
+    "name": "explore-repo-pattern",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "47883965"
+  },
+  "item": [
+    {
+      "name": "product",
+      "item": [
+        {
+          "name": "products",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"categoryId\": \"041764B6-AB77-4C16-BAE2-F4AFB0068A9C\",\r\n  \"name\": \"Tea\",\r\n  \"price\": 10000\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/products",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "products"
+              ]
+            },
+            "description": "Generated from cURL: curl --location 'https://localhost:5001/api/products' \\\r\n--header 'Content-Type: application/json' \\\r\n--data '{\r\n  \"categoryId\": \"11111111-1111-1111-1111-111111111111\",\r\n  \"name\": \"MacBook Pro M3\",\r\n  \"price\": 35000000\r\n}'\r\n"
+          },
+          "response": []
+        },
+        {
+          "name": "products",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"MacBook Pro M3 Max\",\r\n  \"price\": 42000000\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/products/C74A5B91-4B25-4C68-B26C-B255FB09BFBA",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "products",
+                "C74A5B91-4B25-4C68-B26C-B255FB09BFBA"
+              ]
+            },
+            "description": "Generated from cURL: curl --location --request PUT 'https://localhost:5001/api/products/22222222-2222-2222-2222-222222222222' \\\r\n--header 'Content-Type: application/json' \\\r\n--data '{\r\n  \"name\": \"MacBook Pro M3 Max\",\r\n  \"price\": 42000000\r\n}'\r\n"
+          },
+          "response": []
+        },
+        {
+          "name": "products",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/products",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "products"
+              ]
+            },
+            "description": "Generated from cURL: curl --location 'https://localhost:5001/api/products'\r\n"
+          },
+          "response": []
+        },
+        {
+          "name": "products/id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/products/C74A5B91-4B25-4C68-B26C-B255FB09BFBA",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "products",
+                "C74A5B91-4B25-4C68-B26C-B255FB09BFBA"
+              ]
+            },
+            "description": "Generated from cURL: curl --location 'https://localhost:5001/api/products/22222222-2222-2222-2222-222222222222'\r\n"
+          },
+          "response": []
+        },
+        {
+          "name": "products",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/products/aed21ffc-cf17-48f6-bed5-3844dc0f62e3",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "products",
+                "aed21ffc-cf17-48f6-bed5-3844dc0f62e3"
+              ]
+            },
+            "description": "Generated from cURL: curl --location --request DELETE 'https://localhost:5001/api/products/22222222-2222-2222-2222-222222222222'\r\n"
+          },
+          "response": []
+        },
+        {
+          "name": "products/descriptions",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/products/descriptions",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "products",
+                "descriptions"
+              ]
+            },
+            "description": "Generated from cURL: curl --location 'https://localhost:5001/api/products'\r\n"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "stores",
+      "item": [
+        {
+          "name": "stores",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Toko Jakarta\"\r\n  }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/stores",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "stores"
+              ]
+            },
+            "description": "Generated from cURL: curl -X POST http://localhost:9001/api/stores \\\r\n  -H \"Content-Type: application/json\" \\\r\n  -d '{\r\n    \"name\": \"Toko Jakarta\"\r\n  }'\r\n"
+          },
+          "response": []
+        },
+        {
+          "name": "stores",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/stores",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "stores"
+              ]
+            },
+            "description": "Generated from cURL: curl http://localhost:9001/api/stores\r\n"
+          },
+          "response": []
+        },
+        {
+          "name": "stores/Store_ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/stores/{{STORE_ID}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "stores",
+                "{{STORE_ID}}"
+              ]
+            },
+            "description": "Generated from cURL: curl http://localhost:9001/api/stores/{STORE_ID}\r\n"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "New Request",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "New Request",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "",
+      "type": "default"
+    },
+    {
+      "key": "STORE_ID",
+      "value": "",
+      "type": "default"
+    }
+  ]
+}
