@@ -4,9 +4,9 @@ namespace explore_pattern.Api_tests.TestArranges
 {
     public static class EntityArrange
     {
-        public static Guid ProductId = Guid.NewGuid();
+        public static readonly Guid ProductId = Guid.NewGuid();
 
-        public static Category _electornicsCategory = new Category
+        public static readonly Category _electornicsCategory = new Category
         {
             Id = Guid.NewGuid(),
             Name = "Electronics",

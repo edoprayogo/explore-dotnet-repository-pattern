@@ -1,0 +1,1 @@
+powershell -ExecutionPolicy Bypass -File .\scan-sonar.ps1
